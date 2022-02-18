@@ -1,35 +1,70 @@
 import React, {FC} from 'react'
+import StarRateIcon from '@material-ui/icons/StarRate';
+
 import "./App.css";
 
-type OptionalRate = {
-  value: number;
-  label: string;
-}
-
-const options: OptionalRate[] = [
-  {value: 1, label: "one"},
-  {value: 2, label: "two"},
-  {value: 3, label: "three"},
-  {value: 4, label: "four"},
-  {value: 5, label: "five"}
-]
 
 const App:FC = () => {
 
-  const [selectedOption, setSelectedOption] = useState<ValueType<OptionType>>(options[0]);
+
+
+
   return (
     <div className="App">
       <div className="header">AWESOME PROJECT</div>
       <div className="container">
-        <div>
+        <div className="buttonContainer">
           <button>+ ADD</button>
-          <div>
-            <input>
-            <select>
-
-            </select>
-            </input>
+          <select>
+            <option>one</option>
+            <option>two</option>
+            <option>three</option>
+            <option>four</option>
+            <option>five</option>
+          </select>
+        </div>
+        <div className="boxContainer">
+          <div className="box">
+          <button>X</button>
+            <p>Name of project</p>
+           <p>link</p>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
           </div>
+          <div className="box">
+            <button>X</button>
+            <p>Name of project</p>
+           <p>link</p>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          </div>
+          <div className="box">
+            <button>X</button>
+            <p>Name of project</p>
+           <p>link</p>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          </div>
+          <div className="box">
+          <button>X</button>
+            <p>Name of project</p>
+           <p>link</p>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          <StarRateIcon/>
+          </div>
+
         </div>
       </div>
     </div>

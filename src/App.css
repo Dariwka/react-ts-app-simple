@@ -2,3 +2,14 @@
   text-align: center;
 }
 
+.box {
+  place-items: center;
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+  font-size: 18px;
+  border-right: none;
+  background-color: tomato;
+}
+
+
