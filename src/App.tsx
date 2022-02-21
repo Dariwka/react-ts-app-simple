@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import { BrowserRouter as Router } from "react-router-dom";
-import Header from './Components/Header'
-import Main from './Components/Main'
+import Header from './components/Header'
+import Main from './components/Main'
 
 const App:FC = () => {
   return (
