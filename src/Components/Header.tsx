@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
-import ProjectForm from "./ProjectForm";
 
 const Container = styled("div")({
   padding: "10px",
@@ -27,8 +26,6 @@ const AddButton = styled("button")({
     backgroundColor: "darkgreen",
   },
 });
-
-const addProject = (): void => {};
 
 // const StarsRating = () => {
 

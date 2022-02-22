@@ -1,28 +1,7 @@
-import React, { FC, useState } from "react";
-import { IProjectGit } from "../interfaces";
-import ProjectCard from "./ProjectCard";
+import React from "react";
 
-
-
-const Main: FC = () => {
-
-  const [newProjectCard, setProjectCard] = useState<IProjectGit[]>([])
-
-  const deleteCard = (projectNameToDelete: string):void=> {
-    setProjectCard(newProjectCard.filter((project)=>{
-      return project.projectName !== projectNameToDelete
-
-    }))
-
-  }
-
-
-  return <div className="projectList">
-  {newProjectCard.map((project: IProjectGit, key: number)=>{
-    return <ProjectCard key={key} project= {project} deleteCard={deleteCard}/>
-  })}
- </div>
- 
+const Main = () => {
+  return <div>Main</div>;
 };
 
 export default Main;
