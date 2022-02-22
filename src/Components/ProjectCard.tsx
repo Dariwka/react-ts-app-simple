@@ -12,7 +12,7 @@ const ProjectCard = ({ project, deleteCard }: Props) => {
       <div className="content">
         <span>{project.projectName}</span>
         <span> {project.projectLink}</span>
-        <span> {project.projectRating}</span>
+        {/* <span> {project.projectRating}</span> */}
         <button
           onClick={() => {
             deleteCard(project.projectName);

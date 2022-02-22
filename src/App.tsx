@@ -8,8 +8,6 @@ const App: FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<Main />} />
-      </Routes>
-      <Routes>
         <Route path="/form" element={<ProjectForm />} />
       </Routes>
     </Router>
