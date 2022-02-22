@@ -2,14 +2,16 @@ import React, { FC, ChangeEvent, useState } from "react";
 import { IProjectGit } from "../interfaces";
 
 const ProjectForm: FC = () => {
-  const [projectName, setProject] = useState<string>("");
-  const [projectLink, setLink] = useState<string>("");
+  const [project, setProject] = useState<string>(" ");
+  const [projectLink, setLink] = useState<string>(" ");
   const [projectRating, setRating] = useState<number>(0);
   const [newProjectCard, setProjectCard] = useState<IProjectGit[]>([]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
-    if (event.target.name === "projectName") {
+    if (event.target.name === "project") {
       setProject(event.target.value);
+    } else if (event.target.name === "projectLink") {
+      setLink(event.target.value);
     } else {
       setRating(Number(event.target.value));
     }
@@ -17,7 +19,7 @@ const ProjectForm: FC = () => {
 
   const submitProject = (): void => {
     const newProject = {
-      projectName: projectName,
+      projectName: project,
       projectLink: projectLink,
       projectRating: projectRating,
     };
@@ -36,10 +38,10 @@ const ProjectForm: FC = () => {
           placeholder="Project Name"
           name="project"
           onChange={handleChange}
-          value={projectName}
+          value={project}
         />
         <input
-          type="number"
+          type="text"
           placeholder="Project Link"
           name="projectLink"
           value={projectLink}

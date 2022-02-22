@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled("div")({
   padding: "10px",
@@ -27,6 +28,11 @@ const AddButton = styled("button")({
   },
 });
 
+const LinkForm = styled(Link)({
+  textDecoration: "none",
+  color: "white",
+});
+
 // const StarsRating = () => {
 
 // }
@@ -37,7 +43,9 @@ const Header: FC = () => {
       <Title>Awesome Projects</Title>
       <Wrapper>
         <div className="addButtonContainer">
-          <AddButton>+ ADD</AddButton>
+          <AddButton>
+            <LinkForm to="/form">+ ADD</LinkForm>
+          </AddButton>
         </div>
         <div className="sortContainer">
           <select>
