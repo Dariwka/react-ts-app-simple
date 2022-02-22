@@ -1,15 +1,19 @@
-import React, {FC} from 'react'
-import { BrowserRouter as Router } from "react-router-dom";
-import Header from './Components/Header'
-import Main from './Components/Main'
+import React, { FC } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Main from "./components/Main";
+import ProjectForm from "./components/ProjectForm";
 
-const App:FC = () => {
+const App: FC = () => {
   return (
     <Router>
-      <Header/>
-      <Main/>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+      <Routes>
+        <Route path="/form" element={<ProjectForm />} />
+      </Routes>
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
