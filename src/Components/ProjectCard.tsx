@@ -1,5 +1,6 @@
 import React from "react";
 import { IProjectGit } from "../interfaces";
+import StarsRating from "./RatingStars/StarsRating";
 
 interface Props {
   project: IProjectGit;
@@ -12,6 +13,7 @@ const ProjectCard = ({ project, deleteCard }: Props) => {
       <div className="content">
         <span>{project.projectName}</span>
         <span> {project.projectLink}</span>
+        <StarsRating />
         {/* <span> {project.projectRating}</span> */}
         <button
           onClick={() => {

@@ -54,7 +54,8 @@
     "@types/react-select": "^5.0.1",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.4",
-    "prettier": "2.5.1"
+    "prettier": "2.5.1",
+    "react-simple-star-rating": "^4.0.5"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

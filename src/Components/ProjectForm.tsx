@@ -74,6 +74,7 @@ const ProjectForm: FC = () => {
 
     setProject("");
     setLink("");
+    console.log("clicked");
   };
 
   return (
@@ -92,8 +93,8 @@ const ProjectForm: FC = () => {
             type="text"
             placeholder="Your Github Project Link......"
             name="projectLink"
-            value={projectLink}
             onChange={handleChange}
+            value={projectLink}
           />
           <ButtonSubmit onClick={submitProject}>Submit</ButtonSubmit>
         </Form>
